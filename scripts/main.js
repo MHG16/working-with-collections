@@ -50,13 +50,11 @@ var GBP = items.filter(function findGBP(currentValue, index, array) {
 	}
 });
 
-console.log(GBP.map(function nameAndPrice(currentValue) {
+GBP.forEach(function nameAndPrice(currentValue) {
+
+	console.log('The name is: '+currentValue.title+' and the price is '+currentValue.price);			
 	
-	var name = currentValue.title;
-	var price = currentValue.price;
-	var arr1 = [name, price];
-	return arr1; 
-}));
+});
 
 //4. Show me how to find which items are made of wood. Please console.log the ones you find.
 // if there is wood it is within the materials array located in each object.  
@@ -64,8 +62,10 @@ console.log(GBP.map(function nameAndPrice(currentValue) {
 //then check each material array for wood with filter
 
 var materials = items.forEach(function getMaterials(currentValue) {
-	return currentValue.materials;
-}
+	var arr = [];
+	arr.push(currentValue.materials)
+	return arr;
+ });
 
 console.log(materials);
 
