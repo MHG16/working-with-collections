@@ -57,19 +57,24 @@ GBP.forEach(function nameAndPrice(currentValue) {
 });
 
 //4. Show me how to find which items are made of wood. Please console.log the ones you find.
-// if there is wood it is within the materials array located in each object.  
+// If a material is made of wood  there it is within the materials array located in each object.  
 //first make an array of all the material arrays with forEach
 //then check each material array for wood with filter
 
-var materials = items.forEach(function getMaterials(currentValue) {
-	var arr = [];
-	arr.push(currentValue.materials)
-	return arr;
+var materials = items.filter(function getMaterials(currentValue, index, array) {
+	if (currentValue.materials.includes('wood')) {
+		return true;
+	}
+	else {
+		return false;  
+	}
  });
 
-console.log(materials);
+materials.forEach(function nameOfWoodItems(currentValue) {
 
+	console.log(currentValue.title);
 
+});
 
 
 
