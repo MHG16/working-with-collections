@@ -111,7 +111,7 @@ var madeBySellers = items.filter(function madeBySellers(currentValue, index, arr
 
 eightmaterials.forEach(function totalItems(currentValue) {
 
-	console.log(currentValue.title);  //want to count the total and return that.  
+	console.log(total = total +1);  //want to count the total and return that.  
 
 });
 
