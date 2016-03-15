@@ -81,13 +81,46 @@ materials.forEach(function nameOfWoodItems(currentValue) {
 // //5. Show me how to find which items are made of eight or more materials. 
 // //Please console.log the ones you find.
 
+var eightmaterials = items.filter(function getEightMaterials(currentValue, index, array) {
+	if (currentValue.materials.length >= 8) {
+		return true;
+	}
+	else {
+		return false;  
+	}
+ });
 
+eightmaterials.forEach(function nameOfItems(currentValue) {
 
+	console.log(currentValue.title);
 
-
+});
 
 
 //6. Show me how to calculate how many items were made by their sellers 
+
+var madeBySellers = items.filter(function madeBySellers(currentValue, index, array) {
+	
+	if (currentValue.who_made === 'I_did') {
+		return true
+	}
+	else {
+		return false;  
+	}
+ });
+
+eightmaterials.forEach(function totalItems(currentValue) {
+
+	console.log(currentValue.title);  //want to count the total and return that.  
+
+});
+
+
+
+
+
+
+
 
 
 
